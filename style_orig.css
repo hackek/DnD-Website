@@ -1,0 +1,2071 @@
+/**
+ * Copyright (c) 2008 ClanTemplates.com
+ * Digitalism; a free template by George at ClanTemplates.com
+ * No part of this file may be redistributed without written permission
+ * Designed by pJeh <jeroen.jeh@gmail.com>
+ * Coded by HarZens <ventas@harzens.com.ar>
+ * http://www.clantemplates.com/pages/Legal
+ */
+ 
+* {
+	margin:0;
+	padding:0;
+	border:0;
+	font-family: Verdana;
+	color: #1A1A1A;
+}
+
+body {
+	background-color: #414141;
+}
+blockquote {
+	color: #52527a;
+	background-color: #d1d1e0;
+	font-style: italic;
+	padding: 3px;
+	border-style: inset;
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+td {
+	vertical-align: top;
+}
+
+ol, ul {
+	list-style: none;
+}
+ol.decimal {
+	display: block;
+	list-style-type: decimal;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 30px;
+	margin-right: 0;
+}
+img {
+	z-index: 5;
+}
+input {
+	-webkit-appearance: textfield;
+	background-color: white;
+	-webkit-rtl-ordering: logical;
+	user-select: text;
+	cursor: auto;
+	padding: 1px;
+	margin: 1px;
+/*	border-width: 2px;	*/
+	border-style: inset;
+	border-color: initial;
+	border-image: initial;
+}
+input, textarea, select, button {
+	text-rendering: auto;
+	color: initial;
+	margin-bottom: 8px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	margin: 0em;
+	font: 13.3333px Arial;
+}
+a:hover {
+	text-decoration: none;
+}
+
+div#wrap {
+	margin: 0 auto;
+/*	width: 840px;	*/
+	width: 900px;
+	padding: 2px 3px 0px;
+/*	background-color: #FFF;	*/
+/*	background: #FDF1DC;	*/
+}
+
+div#header {
+/**	background-image: url('./images/Header_Image.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 840px;
+	height: 213px;
+	padding-bottom: 2px;
+**/
+}
+
+.HeaderContaner {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.HeaderText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #FFF;
+	font-weight: bold;
+	font-size: 40px;
+	z-index: 10;
+}
+
+.mySlides {
+	display:none;
+	background-repeat: no-repeat;
+	background-position: top center;
+/*	width: 840px;	*/
+	width: 900px;
+	height: 213px;
+	padding-bottom: 2px;
+	margin-top: -42px;
+}
+.w3-animate-fading{
+	z-index: 0;
+	animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}
+}
+
+/* Old menu style  \/\/\/\/\/  */
+div#menu {
+	background-image: url('./images/navBG.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+/*	width: 840px;	*/
+	width: 900px;
+	height: 30px;
+	padding-bottom: 2px;
+}
+
+div#menu ol {
+	list-style: none;
+/*	margin-left: 110px; */
+}
+
+div#menu ol li {
+	float: left;
+}
+
+div#menu ol li a {
+	line-height: 30px;
+	padding: 0 16px;
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+div#menu ol li a:hover {
+	background-image: url('./images/navRO.jpg');
+	background-repeat: repeat-x;
+	background-position: top center;
+}
+/* Old menu style  /\/\/\/\/\  */
+
+
+
+
+
+
+
+
+
+/* New menu style */
+.navbar {
+	background-image: url('./images/navBG.jpg');
+/*	background-repeat: no-repeat;	*/
+	background-position: top center;
+/*	width: 840px;	*/
+	width: 900px;
+	height: 30px;
+	padding-bottom: 2px;
+	z-index: -99;
+	margin-bottom: 5px;
+}
+
+.navbar a {
+	line-height: 30px;
+	padding: 0 16px;
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+/*	text-transform: uppercase;	*/
+	letter-spacing: -1px;
+	float: left;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	line-height: 30px;
+	padding: 0 16px;
+	font-weight: bold;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #cc0000;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #cc0000;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	opacity: 0.9;
+}
+
+.dropdown-content a {
+	float: none;
+	color: white;
+	padding: 3px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.dropdown-content a:hover {
+	background-color: #ff9999;
+	color: black;
+	opacity: 0.99;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+
+
+
+
+div#content {
+	background-image: url('./images/contentBG.jpg');
+	background-repeat: repeat-y;
+	background-position: top center;
+	background: #FDF1DC;
+}
+
+div#leftColumn, div#rightColumn {
+	width: 216px;
+}
+
+div#leftColumn {
+	float: left;
+}
+
+div#rightColumn {
+	float: right;
+}
+
+div#middleColumn {
+	width: 404px;
+	margin: 0 auto;
+	padding: 0;
+	padding-top: 1px;
+}
+
+div#mainColumn {
+/*	width: 840px;	*/
+	width: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+div.box, div.box div.boxTitle, div.box div.boxContent div.boxMid {
+	width: 216px;
+}
+
+div.box div.boxTitle div.boxMid {
+	background-image: url('./images/boxTitleBG.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 25px;
+}
+
+div.box div.boxTitle h3 div.boxMid {
+	padding-top: 4px;	
+	line-height: 22px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 11px;
+	padding-left: 13px;
+}
+
+div.box div.boxContent div.boxMid {
+	margin-bottom: 2px;
+}
+
+div.box div.boxContent ol, div.box div.boxContent ol.dual ol.dualL div.boxMid {
+	list-style: none;
+}
+
+div.box div.boxContent ol li, div.box div.boxContent ol.dual li ol.dualL div.boxMid {
+	height: 23px;
+}
+
+div.box div.boxContent ol.dual li div.boxMid {
+	text-align: right;
+	clear: left;
+}
+div.box div.boxContent ol.dualL li div.boxMid {
+	text-align: left;
+	clear: left;
+}
+
+div.box div.boxContent ol li a span.text div.boxMid {
+	float: left;
+}
+
+div.box div.boxContent ol li a, div.box div.boxContent ol.dual li a div.boxMid {
+	background-color: #FFF;
+	background-image: url('./images/boxLiBG.jpg');
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	display: block;
+	line-height: 23px;
+	padding-left: 5px;
+	text-decoration: none;
+}
+
+div.box div.boxContent ol li a div.boxMid {
+	padding-right: 5px;
+}
+
+div.box div.boxContent ol li a:hover div.boxMid {
+	text-decoration: underline;
+}
+
+div.box div.boxContent ol.sponsors LI div.boxMid {
+	border-bottom: 2px solid #F16F6F;
+}
+
+div.box div.boxContent ol.sponsors li, div.box div.boxContent ol.sponsors li a div.boxMid {
+	height: auto;
+	padding: 0;
+}
+
+div.box div.boxContent ol.sponsors li a span div.boxMid {
+	padding-left: 5px;
+}
+
+div.box div.boxContent ol.sponsors li a:hover div.boxMid {
+	text-decoration: none;
+}
+
+div.box div.boxContent ol.sponsors li a:hover span div.boxMid {
+	padding-left: 15px;
+}
+
+div.box div.boxContent div#rosterBox table#rostertable div.boxMid {
+	text-align: center;
+	width: 100%;
+	margin-left: 1px;
+}
+
+div.box div.boxContent div#rosterBox table#rostertable td div.boxMid {
+	padding: 6px;
+}
+
+div.box div.boxContent div#rosterBox div#rosterUser div.boxMid {
+	margin: 0px 6px 5px;
+	padding: 3px 5px;
+	text-align: center;
+	background-color:#EFEFEF;
+}
+div.boxMid {
+	width:470px;
+}
+
+div#loginBox {
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-bottom: 3px;
+}
+
+div#loginBox input.logininput {
+	width: 170px;
+	border-top: 1px solid #434343;
+	background-color: #E0E0E0;
+	background-image: url('./images/greyDot.jpg');
+	background-repeat: repeat-x;
+	background-position: top center;
+	text-align: right;
+	padding-top: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 10px;
+/*	margin: 5px auto;	*/
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#loginBox div#loginButtons {
+/*	padding-right: 16px;	*/
+}
+
+div#loginBox input.loginButton {
+	width: 63px;
+/*	line-height: 25px;	*/
+	height: 25px;
+	text-align: center;
+	color: #FFF;
+	font-size: 11px;
+	background-color: #F40000;
+	background-image: url('./images/inputButtonBG.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin-left: 8px;
+}
+
+div#mainColumn  div.mainSeparator {
+	background-image: url('./images/mainSeparatorBG.jpg');
+	background-repeat: no-repeat;
+	background-position: top left;
+	height: 24px;
+	padding-bottom: 3px;
+}
+
+div#mainColumn  div.mainSeparator h3 {
+	line-height: 22px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 11px;
+	padding-left: 13px;
+	padding-top: 4px;	
+}
+
+div#mainColumn  div.headline div.headlineTitle {
+	background-image: url('./images/contentTitle840.jpg');
+	background-repeat: no-repeat;
+	background-position: top left;
+	height: 34px;
+}
+
+div#mainColumn  div.headline div.headlineTitle h3 {
+	line-height: 22px;
+	color: #FFF;
+	font-size: 11px;
+	padding-left: 13px;
+	padding-top: 4px;	
+	font-weight: normal;
+}
+
+div#mainColumn  div.headline div.headlineContent {
+	padding: 8px 15px;
+}
+
+div#mainColumn  div.headline div.headlineContent div.headlineInfo ol li span {
+	font-weight: bold;
+}
+
+div#mainColumn  div.headline div.headlineContent div.headlineInfo ol li {
+	margin-bottom: 3px;
+}
+
+div#mainColumn  div.headline div.headlineContent div.headlineInfo OL {
+	margin-bottom: 10px;
+}
+
+div#mainColumn  div.headline div.headlineContent div.headlineInfo ol li a {
+	color: #F00;
+}
+
+div#mainColumn  div.headline div.headlineContent p {
+	margin-bottom: 4px;
+}
+
+div#mainColumn  div.headline div.headlineContent ul {
+	margin-left: 5px;
+}
+
+div#mainColumn  div.headline div.headlineContent ul li {
+	margin-bottom: 6px;
+}
+
+div#mainColumn  div.advertisementBanner {
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+div#middleColumn  div.mainSeparator {
+	background-image: url('./images/mainSeparatorBG.jpg');
+	background-repeat: no-repeat;
+	background-position: top left;
+	height: 24px;
+	padding-bottom: 3px;
+}
+
+div#middleColumn  div.mainSeparator h3 {
+	line-height: 22px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 11px;
+	padding-left: 13px;
+	padding-top: 4px;	
+}
+
+div#middleColumn  div.headline div.headlineTitle {
+	background-image: url('./images/contentTitle.jpg');
+	background-repeat: no-repeat;
+	background-position: top left;
+	height: 34px;
+}
+
+div#middleColumn  div.headline div.headlineTitle h3 {
+	line-height: 22px;
+	color: #FFF;
+	font-size: 11px;
+	padding-left: 13px;
+	padding-top: 4px;	
+	font-weight: normal;
+}
+
+div#middleColumn  div.headline div.headlineContent {
+	padding: 8px 15px;
+}
+
+div#middleColumn  div.headline div.headlineContent div.headlineInfo ol li span {
+	font-weight: bold;
+}
+
+div#middleColumn  div.headline div.headlineContent div.headlineInfo ol li {
+	margin-bottom: 3px;
+}
+
+div#middleColumn  div.headline div.headlineContent div.headlineInfo OL {
+	margin-bottom: 10px;
+}
+
+div#middleColumn  div.headline div.headlineContent div.headlineInfo ol li a {
+	color: #F00;
+}
+.BottomSpacer {
+	padding-bottom: 50px;
+}
+
+div#middleColumn  div.headline div.headlineContent p {
+	margin-bottom: 4px;
+}
+
+div#middleColumn  div.headline div.headlineContent ul {
+	margin-left: 5px;
+}
+
+div#middleColumn  div.headline div.headlineContent ul li {
+	margin-bottom: 6px;
+}
+
+div#middleColumn  div.advertisementBanner {
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+div#footer {
+	clear: both;
+}
+
+
+
+
+
+/* The following classes were added to this file */
+hr.normal {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+}
+p {
+	text-indent: 10px;
+}
+th {
+	color: white;
+	background: black;
+}
+sup {
+	font-size: 6px;
+	font-weight: bold;
+	color: crimson;
+}
+
+
+
+.houseRules {
+	color: #b37700;
+	font-style: italic;
+}
+
+
+
+
+.circle {
+	list-style-type: circle;
+	padding-left: 3px;
+}
+.circle2 {
+	list-style-type: circle;
+	padding-left: 3px;
+	margin-left: 15px;
+}
+.cLeft {
+	clear: left;
+}
+
+.comment {
+	color: gray;
+	font-style: italic;
+}
+
+.countryTitle {
+	font-size: 24px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.creatures {
+	color: #999900;
+	font-weight: bold;
+	font-style: italic;
+}
+.damage {
+	color: crimson;
+	font-style: italic;
+	font-weight: bold;
+}
+.damageU {
+	color: crimson;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.DMBackground {
+	background-color: #ffe6e6;
+}
+.deities {
+	color: #ff9900;
+	font-style: italic;
+	font-weight: bold;
+}
+.events {
+	color: #ff0080;
+	font-weight: bold;
+	font-style: italic;
+}
+.gear {
+	color: blue;
+	font-style: italic;
+	font-weight: bold;
+}
+.green {
+	color: #B8D353
+}
+.house {
+	color: olive;
+	font-style: italic;
+	font-weight: bold;
+}
+h3.houseTitle {
+	color: black;
+	font-weight: bold;
+}
+.left2 {
+	float: left;
+}
+.right2 {
+	float: right;
+}
+.left {
+	float: left;
+	padding: 5px;
+}
+
+.festival {
+	color: #000000;
+	font-style: italic;
+	font-weight: bold;
+}
+.languages {
+	color: #ff9900;
+	font-style: italic;
+	font-weight: bold;
+}
+.monsters {
+	color: red;
+	font-style: italic;
+	font-weight: bold;
+}
+.natural {
+	color: brown;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+
+
+.BanditNote {
+	background-image: url('./images/Things/Normal/Old_Paper_Med.png');
+	background-repeat: no-repeat;
+	background-position: top middle;
+
+	height: 750px;
+	width: 550px;
+	border: 0;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-right: 100px;
+
+	position: relative;
+}
+table.BanditNoteFont tr td {
+	font-family: mySecondFont;
+	font-size: 24px;
+	height: 50px;
+}
+p.BanditNoteFont {
+	font-family: mySecondFont;
+	font-size: 26px;
+	line-height: 1.1;
+}
+
+
+
+
+.FrixPoem {
+	background-image: url('./images/Things/Normal/Old_Paper_Med.png');
+	background-repeat: no-repeat;
+	background-position: top middle;
+
+	font-size: 16px;
+
+	height: 750px;
+	width: 550px;
+	border: 0;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-right: 100px;
+
+	position: relative;
+}
+
+
+
+
+.LegalDeed {
+	font-size: 25px;
+	font-family: OldLondonFont;
+	line-height: 1.1;
+
+	background-image: url('./images/Things/Normal/Old_Paper_Med.png');
+	background-repeat: no-repeat;
+	background-position: top middle;
+
+	height: 750px;
+	width: 550px;
+	border: 0;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-right: 100px;
+
+	position: relative;
+}
+
+
+
+
+
+.DrowNote {
+	font-family: myThirdFont;
+	font-size: 18px;
+
+	background-image: url('./images/Things/Normal/Old_Paper_Med.png');
+	background-repeat: no-repeat;
+	background-position: top middle;
+
+	height: 750px;
+	width: 550px;
+	border: 0;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-right: 100px;
+
+	position: relative;
+}
+
+
+
+
+.FrostGiantNote {
+	font-family: myFourthFont;
+	font-size: 18px;
+
+	background-image: url('./images/Things/Normal/Old_Paper_Med.png');
+	background-repeat: no-repeat;
+	background-position: top middle;
+
+	height: 750px;
+	width: 550px;
+	border: 0;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-right: 100px;
+
+	position: relative;
+}
+
+
+
+
+.SuloisNotes {
+	font-family: myFithFont;
+	font-size: 25px;
+	line-height: 1.1;
+	font-weight: bold;
+
+	background-image: url('./images/Things/Normal/Old_Paper_Med.png');
+	background-repeat: no-repeat;
+	background-position: top middle;
+
+	height: 750px;
+	width: 550px;
+	border: 0;
+	padding-left: 60px;
+	padding-top: 50px;
+	padding-right: 100px;
+
+	position: relative;
+}
+
+
+
+
+
+
+
+.people {
+	color: #669900;
+	font-style: italic;
+	font-weight: bold;
+}
+.place {
+	color: #bf4040;
+	font-style: italic;
+	font-weight: bold;
+}
+.woods {
+	color: green;
+	font-style: italic;
+	font-weight: bold;
+}
+.placesHexes {
+	padding-left: 10px;
+}
+.placesPlaces {
+	padding-left: 25px;
+}
+
+.LoftPlace {
+	color: #bf4040;
+	font-style: italic;
+	font-weight: bold;
+}
+.LoftBridge {
+	color: blue;
+	font-style: italic;
+	font-weight: bold;
+}
+.LoftDock {
+	color: #8647bc;
+	font-style: italic;
+	font-weight: bold;
+}
+.LoftGate {
+	color: #ba47bc;
+	font-style: italic;
+	font-weight: bold;
+}
+.LoftPark {
+	color: green;
+	font-style: italic;
+	font-weight: bold;
+}
+.LoftSquare {
+	color: #c19b32;
+	font-style: italic;
+	font-weight: bold;
+}
+.LoftWall {
+	color: grey;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+.quote {
+	color: #52527a;
+	font-style: italic;
+	background-color: #d1d1e0;
+	padding: 3px;
+	border-style: inset;
+	border: 1px solid black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.races {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+}
+.red {
+	color: #F00;
+}
+.right {
+	float: right;
+	padding: 5px;
+}
+
+
+
+
+.hexImage {
+	float: right;
+	padding: 5px;
+	
+}
+/*
+.hexImage:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+*/
+
+
+.road {
+	font-style: italic;
+	font-weight: bold;
+}
+.ShowDate {
+	font-style: italic;
+	font-weight: bold;
+}
+.spell, .magic {
+	color: #751aff;
+	color: #00ccff;
+	color: #9900ff;
+	color: #6600ff;
+	font-style: italic;
+	font-weight: bold;
+}
+.square {
+	list-style-type: square;
+}
+.TDleft {
+	text-align: left;
+}
+.TDcenter {
+	text-align: center;
+}
+.TDright {
+	text-align: right;
+	margin-right: 10px;
+}
+.water {
+	color: #0099ff;
+	font-style: italic;
+	font-weight: bold;
+}
+.TDCalDates {
+	text-align: center;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.SpellLevel {
+	color: #922610;
+	font-style: italic;
+}
+
+
+
+/* Calendars definitions */
+table.calendar {
+	border-collapse: collapse;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+th.festival {
+	padding: 5px;
+	text-align: left;
+}
+th.month {
+	background-color: #999999;
+	padding: 5px;
+	text-align: left;
+}
+td.calendar {
+	padding: 15px;
+	text-align: right;
+	font-size: 12px;
+	border: 1px solid black;
+}
+
+
+
+/* NPC template spell table */
+.NPCSpells table, .NPCSpells td {
+	padding-left: 10px;
+}
+
+
+
+
+/* Character table definitions */
+table.character {
+	border-style: solid;
+	border-width: 2px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+th.statName {
+	width: 30px;
+}
+td.statVal {
+	text-align: right;
+	width: 20px;
+}
+table.characterStuff {
+	margin-right: 15px;
+}
+th.characterStuff {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+
+
+
+/* Monster table definitions */
+table.monster {
+	border-style: solid;
+	border-width: 2px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+tr.monster, td.monster {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+td.monsterR {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+	text-align: right;
+}
+.monster tr:nth-child(odd) {
+	background-color: #EBF4FB;
+}
+.monster tr:nth-child(even) {
+	background-color: #fff;
+}
+.monsterhead th {
+	color: #ffffff;
+	background-color: #0080C7;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.monster tr:hover {
+	background-color: #f5f5f5;
+}
+td.monsterSPTitle {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-weight: bold;
+}
+td.monsterSPDesc {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+
+
+
+/* Brown table definitions */
+table.brown {
+	border-style: solid;
+	border-width: 2px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+tr.brown, td.brown {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+td.brownR {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 9px;
+	text-align: right;
+}
+.brown tr:nth-child(odd) {
+	background-color: #ffeee6;
+}
+.brown tr:nth-child(even) {
+	background-color: #fff;
+}
+.brownhead th {
+	color: #ffffff;
+	background-color: #993300;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.brown tr:hover {
+	background-color: #ffddcc;
+}
+td.brownSPTitle {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-weight: bold;
+}
+td.brownSPDesc {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+td.indent20 {
+	padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Recap definitions */
+table.recap {
+	border-collapse: collapse;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+hr.recap {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+}
+th.recap, td.recap {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin: 10px;
+}
+tr.recap:nth-child(even){
+	background-color: #e0e0eb;
+}
+th.recap {
+	background-color: black;
+	color: white;
+	text-align: left;
+}
+
+.ElfGroup {
+	color: green;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+
+/* --------------- Custom fonts --------------- */
+@font-face {
+	font-family: myFirstFont;
+	src: url(./Fonts/AlanisHand.ttf);
+}
+
+@font-face {
+	/*	A handwritten font */
+	font-family: mySecondFont;
+	src: url(./Fonts/mulders-handwriting.ttf);
+}
+
+@font-face {
+	/*	A gothic style, used for official documents */
+	font-family: OldLondonFont;
+	src: url(./Fonts/OldLondon.ttf);
+}
+
+@font-face {
+	/*	A elvish font, used for elf and drow documents */
+	font-family: myThirdFont;
+	src: url("./Fonts/elvish ring nfi.ttf");
+}
+
+@font-face {
+	/*	A runic font, used for dwarves and giants */
+	font-family: myFourthFont;
+	src: url("./Fonts/ANGERTH.TTF");
+}
+
+@font-face {
+	/*	A Sulois font, used for ancient documents */
+	font-family: myFithFont;
+	src: url("./Fonts/Siddiqua-OpK8.ttf");
+}
+
+
+
+
+
+.ProficiencyBonus {
+	color: brown;
+	font-weight: bold;
+}
+.SpellCastingMod {
+	color: black;
+	font-weight: bold;
+}
+
+.rotated90 {
+	writing-mode: tb-rl;
+	transform: rotate(-90deg);
+}
+
+.Sthrows {
+	padding-right: 10px;
+	padding-left: 15px;
+	text-align: right;
+}
+.blueBack {
+	background-color: #d7eefb;
+}
+
+
+
+
+
+
+
+.tableHeaderRotated {
+	border-collapse: collapse;
+}
+
+th.rotate {
+	height: 10px;
+	white-space: nowrap;
+	background-color: inherit;
+}
+
+th.rotate > div {
+	transform: translate(25px, 51px) rotate(315deg);
+	width: 30px;
+}
+
+th.rotate > div > span {
+	border-bottom: 1px solid #d7eefb;
+	padding: 5px 10px;
+}
+
+
+
+
+/*
+	Rotate headers 45 degrees 
+	https://css-tricks.com/rotated-table-column-headers/#demo
+*/
+.table-header-rotated {
+	border-collapse: collapse;
+}
+.csstransforms .table-header-rotated td {
+	width: 30px;
+}
+.no-csstransforms .table-header-rotated th {
+	padding: 5px 10px;
+
+}
+.table-header-rotated td {
+	text-align: center;
+	padding: 10px 5px;
+	border: 1px solid #ccc;
+}
+.csstransforms .table-header-rotated th.rotate {
+	height: 140px;
+	white-space: nowrap;
+			background-color: inherit;
+}
+.csstransforms .table-header-rotated th.rotate > div {
+	-webkit-transform: translate(25px, 51px) rotate(315deg);
+			  transform: translate(25px, 51px) rotate(315deg);
+	width: 30px;
+
+}
+.csstransforms .table-header-rotated th.rotate > div > span {
+	border-bottom: 1px solid #ccc;
+	padding: 5px 10px;
+}
+.table-header-rotated th.row-header {
+	padding: 0 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	The following styles are used in DM mode only.
+	They are used to render the details of an NPC.
+*/
+.charContainer {
+	/* This is the overall container for the character */
+	height: 800px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	background: white;
+	padding: 3px;
+}
+
+.characterNameRankLevelContainer {
+	/* This holds the name, rank & level */
+	width: 99%;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	background: #d7eefb;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	margin-bottom: 3px;
+}
+.characterNameBig {
+	/* Big name in the top left */
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+
+.row2 {
+	float: left;
+/*	border: 2px solid red;	*/
+	margin-bottom: 5px;
+}
+
+.characterPortrait {
+	/* Holds the image of the NPC */
+	float: left;
+	width: 200px;
+	height: 480px;
+	border: 2px solid #0080C7;
+	border-radius: 10px;
+	padding-top: 4px;
+	padding-left: 1px;
+	margin-right: 5px;
+
+	max-height: 480px;
+	max-width: 200px;
+	overflow: hidden;
+
+}
+
+
+
+
+
+
+.characterDetailsContainer {
+	/* Holds the following pieces:
+			characterAbilities
+			characterCol3
+			characterCol4
+	*/
+	float: right;
+	width: 590px;
+	height: 484px;
+/*	border: 1px solid cyan;	*/
+}
+
+
+.characterAbilities {
+	/* Container for the 6 ability scores */
+	float: left;
+	width: 74px;
+	height: 470px;
+	color: blue;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	background: #d7eefb;
+	padding: 5px;
+}
+.characterAbilitiesBox {
+	width: 70px;
+	height: 55px;
+	float: left;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	background: white;
+	padding-top: 5px;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 0px;
+}
+.characterAbilityTxt {
+	font-size: 8px;
+}
+.characterAbility {
+	font-size: 20px;
+	font-weight: bold;
+}
+.characterAbilityModBox {
+	position: relative;
+	left: 17px;
+	top: 5px;
+	z-index: 1;
+	width: 20px;
+	height: 15px;
+	float: left;
+	border: 2px solid #0080C7;
+	border-radius: 10px;
+	background: white;
+	text-align: center;
+	padding: 4px;
+}
+
+
+.characterCol3 {
+	/* Container to hold proficinecy bonus, saving throws & skills */
+	float: left;
+	width: 180px;
+	height: 475px;
+	padding-left: 2px;
+	margin-left: 5px;
+	margin-top: 1px;
+/*	border: 2px dashed #ff9933;	*/
+/*	color: #ff9933;					*/
+}
+.characterProfBonusTxt {
+	position: relative;
+	width: 160px;
+	height: 20px;
+	border-top: 2px solid #0080C7;
+	border-right: 2px solid #0080C7;
+	border-bottom: 2px solid #0080C7;
+	border-radius: 0px 13px 13px 0px;
+	padding-top: 5px;
+	margin-left: 20px;
+	margin-top: -2px;
+	margin-bottom: 5px;
+}
+.characterProfBonus {
+	/* The round box with the proficiency bonus */
+	position: relative;
+	width: 25px;
+	height: 20px;
+	float: left;
+	border: 2px solid #0080C7;
+	border-radius: 13px;
+	padding-top: 5px;
+	text-align: center;
+	margin-top: -7px;
+	margin-left: -24px;
+	margin-right: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	z-index: 2;
+}
+
+.savingThrowContainer {
+	width: 180px;
+	height: 120px;
+	border: 2px solid #0080C7;
+	border-radius: 13px 13px 13px 13px;
+	padding-top: 2px;
+	padding-left: 2px;
+	margin-left: -4px;
+	margin-bottom: 5px;
+}
+.skillsContainer {
+	width: 180px;
+	height: 311px;
+	border: 2px solid #0080C7;
+	border-radius: 13px 13px 13px 13px;
+	padding-top: 5px;
+	padding-left: 2px;
+	margin-left: -4px;
+	margin-bottom: 20px;
+}
+.pad5 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+.characterCol4 {
+	/* Container for AC, HPs, Initiative, Speed & spells */
+	float: left;
+	width: 220px;
+	height: 475px;
+	margin-left: 5px;
+/*	border: 2px dashed #ff66ff;	*/
+/*	color: #ff66ff;					*/
+}
+.characterCol4_1 {
+	float: left;
+	width: 302px;
+	height: 40px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	background: #d7eefb;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.AcHpInitSpeed {
+	width: 45px;
+	height: 35px;
+	float: left;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	background: white;
+	padding-top: 5px;
+	margin-bottom: 20px;
+	text-align: center;
+	padding-top: 0px;
+	margin-right: 5px;
+}
+
+.spellsContainer {
+	/* Spells */
+	float: left;
+	width: 302px;
+	height: 411px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+/*	background: #d7eefb;	*/
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+
+.row3 {
+	float: left;
+	margin-bottom: 5px;
+}
+.weaponsPannel {
+	/* Weapons */
+	float: left;
+	width: 220px;
+	width: 550px;
+	height: 100px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+/*	background: #d7eefb;	*/
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	margin-right: 5px;
+}
+table.weaponsArmor {
+	border-collapse: collapse;
+	width: 98%;
+}
+th.weaponsArmor {
+	display: table-cell;
+	vertical-align: inherit;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px;
+}
+table.weaponsArmor td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.armorPannel {
+	/* Weapons */
+	float: left;
+	width: 200px;
+	height: 100px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+/*	background: #d7eefb;	*/
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	margin-right: 5px;
+}
+
+
+.gearPannel {
+	/* Gear */
+	float: left;
+	width: 270px;
+	height: 130px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+/*	background: #d7eefb;	*/
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	margin-right: 5px;
+}
+.commentsPannel {
+	/* Gear */
+	float: left;
+	width: 225px;
+	height: 130px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+/*	background: #d7eefb;	*/
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	margin-right: 5px;
+}
+.languagesPannel {
+	/* Languages */
+	float: left;
+	width: 110px;
+	height: 135px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	margin-right: 5px;
+}
+.proficienciesPannel {
+	/* Proficiencies */
+	float: left;
+	width: 110px;
+	height: 135px;
+	border: 2px solid #0080C7;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+h3.spacer {
+	margin-top: 20px;
+}
+
+#to-bottom a {
+	position: fixed;
+	z-index: 99999;
+	bottom: 25px;
+	right: 0px;
+	height: 33px;
+	padding: 5px;
+	width: 80px;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 15px 0px 0px 15px;
+	border: solid 4px #E69A28;
+	background: ##FDF1DC;
+	color: #922610;
+	font-weight: bold;
+}
+
+#to-top a {
+	position: fixed;
+	z-index: 99999;
+	top: 25px;
+	right: 0px;
+	height: 33px;
+	padding: 5px;
+	width: 50px;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 15px 0px 0px 15px;
+	border: solid 4px #E69A28;
+	background: ##FDF1DC;
+	color: #922610;
+	font-weight: bold;
+}
+
+.trackingTable {
+	width: 260px;
+}
+.DCMod {
+	text-align: center;
+	width: 30%;
+}
+
+#trackingContainer {
+/*
+	width: 810px;
+	border: red solid 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+*/
+}
+.trackingColumn {
+	position: relative;
+	width: 260px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	margin-right: 20px;
+	left: 0px;
+/*	border: green solid 1px;	*/
+	float: left;
+}
+
+.leftArrow, .rightArrow {
+	font-weight: bold;
+	font-size: 50px;
+	color: #7A200D;
+	text-decoration: none;
+	padding-bottom: 20px;
+}
+.leftArrow {
+	float: left;
+	padding-left: 20px;
+}
+.rightArrow {
+	float: right;
+	padding-right: 20px;
+}
+
+.DnD {
+	color: #7A200D;
+}
+
+
+.BOOM {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 14px;
+	color: #7A200D;
+}
+.Quote {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 14px;
+}
+
+.Party1 {
+	color: #006622;
+}
+.Party2 {
+	color: #602020;
+}
+
+.Anock_Kai_Div {
+	width: 650px;
+	border: 1px solid #66ccff;
+	margin-left: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	color: #0099e6;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.missing {
+	color: black;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+
+.map-placement {
+	display: inline-block;
+	vertical-align: top;
+
+	text-align: left;
+
+	margin-left: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+.MenuFood {
+	background-color: #DAF7A6;
+	background-image: url('./images/Sigils/Filigree3.png');
+	width: 400px;
+	position: relative;
+}
+
+
+
+
+
+
+
+/* tabs */
+/* https://codepen.io/igloude/pen/pnzjc */
+		@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+		body {
+			overflow-y: scroll;
+		}
+
+		.tabWrapper {
+			margin: 0 auto;
+		}
+
+		ul.tabs {
+			width: 803px;
+			height: 80px;
+			margin: 0 auto;
+			list-style: none;
+			overflow: hidden;
+			padding: 0;
+		}
+
+		ul.tabs li {
+			float: left;
+			width: 160px;
+		}
+
+		ul.tabs li a {
+			position: relative;
+			display: block;
+			height: 30px;
+			margin-top: 40px;
+			padding: 10px 0 0 0;
+			font-size: 18px;
+			text-align: center;
+			text-decoration: none;
+			color: #444;
+			background: #f2d187;
+			-webkit-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
+			-moz-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
+			-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
+			border: 0px solid #000;
+			-webkit-transition: padding 0.2s ease, margin 0.2s ease;
+			-moz-transition: padding 0.2s ease, margin 0.2s ease;
+			-ms-transition: padding 0.2s ease, margin 0.2s ease;
+			-o-transition: padding 0.2s ease, margin 0.2s ease;
+			transition: padding 0.2s ease, margin 0.2s ease;
+			box-sizing: initial;
+		}
+
+		.tabs li:first-child a {
+			z-index: 5
+			-webkit-border-top-left-radius: 8px;
+			-moz-border-radius-topleft: 8px;
+			border-top-left-radius: 8px; 
+		}
+
+		.tabs li:nth-child(2) a { z-index: 4; }
+		.tabs li:nth-child(3) a { z-index: 3; }
+		.tabs li:nth-child(4) a { z-index: 2; }
+		.tabs li:last-child a {
+			z-index: 1;
+			-webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+			-moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+			box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+			-webkit-border-top-right-radius: 8px;
+			-moz-border-radius-topright: 8px;
+			border-top-right-radius: 8px;
+		}
+
+		ul.tabs li a:hover {
+			margin: 35px 0 0 0;
+			padding: 10px 0 5px 0;
+		}
+
+		ul.tabs li a.activeTab {
+			margin: 30px 0 0 0;
+			padding: 10px 0 10px 0;
+			color: #444;
+			background: #f2d187;
+			border-top: 2px solid #72655F;
+			border-right: 2px solid #72655F;
+			border-left: 2px solid #72655F;
+			z-index: 6;
+			outline: none;
+		}
+
+		.tabContent {
+			width: 800px;
+			height: 400px;
+			margin: 0 auto;
+			background: #f2d187;
+			-webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+			-moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+			box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+			-webkit-border-bottom-right-radius: 8px;
+			-webkit-border-bottom-left-radius: 8px;
+			-moz-border-radius-bottomright: 8px;
+			-moz-border-radius-bottomleft: 8px;
+			border-bottom-right-radius: 8px;
+			border-bottom-left-radius: 8px;  
+			border-bottom: 2px solid #72655F;
+			border-right: 2px solid #72655F;
+			border-left: 2px solid #72655F;
+		}
+
+		p.tab {
+			font-family: 'PT Sans', sans-serif;
+			padding: 30px 40px;
+			color: #72655F;
+			line-height: 26px;
+			font-size: 18px;
+			margin: 0;
+		}
+
+		#tabTwo, #tabThree, #tabFour, #tabFive {
+			display: none;
+		}
+
+		.tabGroup:before, .tabGroup:after {
+			tabContent: " ";
+			display: table;
+		}
+		.tabGroup:after {
+			clear: both;
+		}

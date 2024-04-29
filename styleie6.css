@@ -1,0 +1,28 @@
+/**
+ * Copyright (c) 2008 ClanTemplates.com
+ * Digitalism; a free template by George at ClanTemplates.com
+ * No part of this file may be redistributed without written permission
+ * Designed by pJeh <jeroen.jeh@gmail.com>
+ * Coded by HarZens <ventas@harzens.com.ar>
+ * http://www.clantemplates.com/pages/Legal
+ */
+
+DIV#content {
+	width: 100%;
+}
+
+DIV#mainColumn {
+	width:402px;
+}
+
+DIV#rightColumn {
+	margin-right: -1px
+}
+
+DIV#mainColumn DIV.mainSeparator {
+	padding-bottom: 1px;
+}
+
+DIV#mainColumn DIV.headline DIV.headlineTitle {
+	background-image: url('./images/contentTitleIE6.jpg');
+}

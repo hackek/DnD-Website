@@ -1,0 +1,427 @@
+/*
+	Giving credit where credit is due:
+	By: Chad Carteret
+	URL: https://codepen.io/retractedhack/full/gPLpWe/
+*/
+body {
+	text-align: center;
+	font-size: 13.5px;
+	line-height: 1.2em;
+	/* Add stained paper background */
+	background-image: url("Images/Backgrounds/PaperBackground01.jpg");
+	background-repeat: repeat;
+	background-color: #cccccc;
+}
+body *{
+	box-sizing: border-box;
+	max-width: 100%;
+	font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+}
+.stat-block {
+	text-align: left;
+/*	margin: 20px;	*/
+	display: inline-block;
+	vertical-align: top;
+	width: 17%;
+	min-width:280px;
+	background: #FDF1DC;
+	padding: 5px 10px 20px;
+	box-shadow: 0 0 1.5em #867453;
+	z-index: -3;
+}
+.stat-block.wide{
+/*	width: 46.5%;	*/
+	width: 900px;
+	min-width: 560px;
+	text-align: center;
+}
+.stat-block.fullwidth {
+	/* Full width of block */
+	width: 900px;
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+}
+.stat-block.subblock {
+	/* Full width of block */
+	width: 420px;
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+}
+.section-center {
+	display: inline-block;
+	vertical-align: top;
+	width: 98%;
+	text-align: center;
+}
+
+.stat-block.wide .section-left,
+.stat-block.wide .section-right{
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+	text-align: left;
+}
+
+.section-subblock{
+	display: inline-block;
+	vertical-align: top;
+	width: 96%;
+	text-align: left;
+}
+
+.stat-block.wide .section-left{
+	margin-right: 1.5%;
+}
+.stat-block.wide .section-right{
+	margin-left: 1.5%;
+}
+@media screen and (max-width: 675px){
+	.stat-block.wide{
+		min-width: 280px;
+	}
+	.stat-block.wide .section-left,
+	.stat-block.wide .section-right{
+		display: block;
+		width: 100%;
+	}
+	.stat-block.wide .section-left{
+		margin: 0;
+	}
+	.stat-block.wide .section-right{
+		margin: 0;
+	}
+}
+
+.stat-block-spacer {
+	height: 40px;
+}
+
+.orange-border{
+	display: block;
+	background: #E69A28;
+	border: 1px solid #000;
+	height: 5px;
+	padding: 0 10px 0;
+	margin: -10px -10px 0;
+	box-sizing: initial;
+}
+.orange-border.bottom{
+	margin: 15px -10px -20px;
+}
+/* Orig color: 922_610 */
+.tapered-rule{
+	display: block;
+	width: 100%;
+	height: 5px;
+	border: none;
+	color: #922610;
+	fill: #922610;
+	stroke: #922610;
+}
+.creature-heading h1{
+	font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+	color: #922610;
+	font-size: 23px;
+	line-height: 1.2em;
+	margin: 10px 0 0;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.creature-heading h2{
+	font-weight: normal;
+	font-style: italic;
+	font-size: 12px;
+	line-height: 1.2em;
+	margin: 0 0 10px;
+}
+
+.creature-heading h3{
+	font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+	color: #922610;
+	font-size: 16px;
+	line-height: 1.2em;
+	margin: 10px 0 0;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+
+.property-line h4,
+.property-line p{
+	display: inline;
+	margin: 0;
+	color: #922610;
+	font-size: 13.5px;
+	line-height: 1.2em;
+}
+.property-line h4{
+  color: #7A200D;
+}
+.property-line{
+	text-indent: -1em;
+	padding-left: 1.1em;
+	line-height: 1.4em;
+}
+.property-line.first{
+	margin: 8px 0 0
+}
+.property-line.last{
+	margin: 0 0 10px;
+}
+.abilities{
+	text-align: center;
+	color: #922610;
+}
+.abilities > div{
+	display: inline-block;
+	vertical-align: middle;
+	width: 15.5%;
+	min-width: 40px; 
+	font-size: 12px;
+	line-height: 1em;
+}
+.abilities h4{
+	margin: 10px 0 2px;
+	font-size: 14px;
+	line-height: 1.2em;
+	text-transform: uppercase;
+	color: #7A200D;
+}
+.abilities p{
+	margin: 0 0 10px;
+	line-height: 1.2em;
+}
+
+
+.spellStats{
+	text-align: center;
+	color: #922610;
+}
+.spellStats > div{
+	display: inline-block;
+	vertical-align: middle;
+	width: 32%;
+	min-width: 40px; 
+	font-size: 12px;
+	line-height: 1em;
+}
+.spellStats h4 {
+	margin: 10px 0 2px;
+	font-size: 14px;
+	line-height: 1.2em;
+	text-transform: uppercase;
+	color: #7A200D;
+}
+.spellStats p {
+	margin: 0 0 10px;
+	line-height: 1.2em;
+}
+
+
+
+
+.property-block h4,
+.property-block p {
+	font-size: 13.5px;
+	line-height: 1.2em;
+	display: inline;
+	margin: 0;
+}
+.property-block h4 {
+	font-style: italic;
+}
+.property-block {
+	padding: 10px 2px 0;
+}
+.actions h3 {
+	border-bottom: 1px solid #7A200D;
+	color: #7A200D;
+	font-size: 21px;
+	font-variant: small-caps;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin: 20px 0 0;
+	padding: 0 0 10px;
+	text-indent: 5px;
+}
+.actions{
+	margin: 0 0 20px;
+}
+.actions:last-child{
+	margin: 0;
+}
+
+@media print{
+	.orange-border{
+		display: none;
+	}
+	.stat-block,
+	.stat-block.wide, 
+	.stat-block.wide .section-left,
+	.stat-block.wide .section-right,
+	.property-line,
+	.property-block{
+		width: 100%;
+		display: block;
+	}
+	.stat-block.wide .section-left{
+		margin: 0;
+	}
+	.stat-block.wide .section-right{
+		margin: 0;
+	}
+	.stat-block{
+		width: 40%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.stat-block.wide{
+		page-break-after: always;
+	}
+}
+@media screen and (max-width: 575px){
+	.stat-block{
+		margin: 20px 0;
+	}
+}
+
+
+
+ul.bumpUp {
+	margin-top: 2px;
+}
+
+
+
+
+.blueStain01 {
+	background-image: url('./Images/Backgrounds/Blue01.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 320px;
+	background-size: 100% auto;
+	opacity: 0.2;
+	filter: alpha(opacity=20);		/* For IE8 and earlier */
+}
+.brownSplat {
+	background-image: url('./Images/Backgrounds/Brown_Splat.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 320px;
+	background-size: 60% auto;
+	opacity: 0.2;
+	filter: alpha(opacity=20);		/* For IE8 and earlier */
+}
+.brownSplat02 {
+	background-image: url('./Images/Backgrounds/Brown02.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 320px;
+	background-size: 90% auto;
+	opacity: 0.3;
+	filter: alpha(opacity=30);		/* For IE8 and earlier */
+}
+.coffeeSplat {
+	background-image: url('./Images/Backgrounds/Coffee1.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 340px;
+	background-size: 60% auto;
+	opacity: 0.2;
+	filter: alpha(opacity=20);		/* For IE8 and earlier */
+}
+.coffeeStain2 {
+	background-image: url('./Images/Backgrounds/Coffee2.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 420px;
+	background-size: 50% auto;
+	opacity: 0.2;
+	filter: alpha(opacity=20);		/* For IE8 and earlier */
+}
+.greenSplat {
+	background-image: url('./Images/Backgrounds/Green_Splat.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 320px;
+	background-size: 60% auto;
+	opacity: 0.2;
+	filter: alpha(opacity=20);		/* For IE8 and earlier */
+}
+.redSplat1 {
+	background-image: url('./Images/Backgrounds/Red_Splat1.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 320px;
+	background-size: 60% auto;
+	opacity: 0.2;
+	filter: alpha(opacity=20);		/* For IE8 and earlier */
+}
+.wine2 {
+	background-image: url('./Images/Backgrounds/Wine2.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 320px;
+	background-size: 40% auto;
+	opacity: 0.7;
+	filter: alpha(opacity=70);		/* For IE8 and earlier */
+}
+.wine2Lt {
+	background-image: url('./Images/Backgrounds/Wine2.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 320px;
+	background-size: 40% auto;
+	opacity: 0.3;
+	filter: alpha(opacity=30);		/* For IE8 and earlier */
+}
+
+
+
+
+
+
+
+
+
+
+
+table.DnD {
+	border-collapse: collapse;
+	border: none;
+	padding: 10px;
+}
+
+th.DnD, td.DnD {
+	text-align: left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: transparent;
+	color: black;
+}
+
+tr.DnD:nth-child(even) {
+	background-color: #C4CD93;
+}
+
+
+
+p.norm {
+	text-indent: 10px;
+}
+

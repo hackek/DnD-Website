@@ -1,0 +1,82 @@
+/* https://phppot.com/css/multilevel-dropdown-menu-with-pure-css/	*/
+#menu {
+	background-image: url('./images/navBG.jpg');
+	background-position: top center;
+	width: 900px;
+	height: 30px;
+	padding-bottom: 2px;
+	z-index: -99;
+	margin-bottom: 5px;
+}
+
+.parent {
+	display: block;
+	position: relative;
+	float: left;
+	line-height: 30px;
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	color: #FFF;
+	letter-spacing: -1px;
+/*	background-color: #4FA0D8;	*/
+	border-right: #CCC 1px solid;
+}
+.parent a {
+	margin: 10px;
+	color: white;
+	text-decoration: none;
+}
+.parent:hover > ul {
+	display: block;
+	position: absolute;
+}
+.child {
+	display: none;
+}
+.child li {
+	background-color: #cc0000;
+	color: green;
+	line-height: 30px;
+	border-bottom: #CCC 1px solid;
+	border-right: #CCC 1px solid;
+	width: 100%;
+			margin-left: -10px;
+}
+.child li a{
+	color: white;
+				font-weight: normal;
+				background-color: #cc0000;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0px;
+	min-width: 10em;
+}
+ul ul ul {
+	left: 100%;
+	top: 0;
+	margin-left: 1px;
+}
+li:hover {
+	background-color: #cc0000;	/* menu header - red */
+}
+.parent li:hover {
+	background-color: pink;	/* menu child - xx */
+
+				min-width: 100px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				border-top-right-radius: 10px;
+				opacity: 0.9;
+
+}
+.expand {
+	font-size: 12px;
+	float: right;
+	margin-right: 5px;
+}

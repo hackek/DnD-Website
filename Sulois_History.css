@@ -1,0 +1,340 @@
+/**
+* Copyright (c) 2008 ClanTemplates.com
+* Digitalism; a free template by George at ClanTemplates.com
+* No part of this file may be redistributed without written permission
+* Designed by pJeh <jeroen.jeh@gmail.com>
+* Coded by HarZens <ventas@harzens.com.ar>
+* http://www.clantemplates.com/pages/Legal
+*/
+table.altrows {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+.altrows tr, td {
+	border-bottom: 1px solid blue;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+.altrows tr:nth-child(odd) {
+	background-color: #EBF4FB;
+}
+.altrows tr:nth-child(even) {
+	background-color: #fff;
+}
+.listhead th {
+	color: #ffffff;
+	background-color: #0080C7;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+.altrows tr:hover {
+	background-color: #f5f5f5
+}
+.TDcenter {
+	text-align: center;
+	width: 55px;
+}
+
+
+
+/* Classes for magic */
+.bind {
+	font-style: italic;
+	font-weight: bold;
+	color: crimson;
+}
+.key {
+	font-style: italic;
+	font-weight: bold;
+	color: crimson;
+}
+.InvokdedDevastation {
+	font-style: italic;
+	font-weight: bold;
+	color: crimson;
+}
+.RainOfFire {
+	font-style: italic;
+	font-weight: bold;
+	color: crimson;
+}
+
+
+
+/* Misc classes */
+.diety {
+	font-style: italic;
+	font-weight: bold;
+	color: #ff9900;
+}
+.event {
+	font-style: italic;
+	font-weight: bold;
+	color: #6600ff;
+}
+.group {
+	font-style: italic;
+	font-weight: bold;
+	color: #0000ff;
+}
+
+.person {
+	font-style: italic;
+	font-weight: bold;
+	color: #0066ff;
+}
+.place {
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+
+
+/* Clases for Suel */
+.suel {
+	font-style: italic;
+	font-weight: bold;
+	color: #0000ff;
+}
+.Abis_ara_Tmat {
+	/* Sulois female arch mage */
+	font-style: italic;
+	font-weight: bold;
+	color: #669900;
+}
+.Alberk {
+	/* High Priest of Jascar */
+	font-style: italic;
+	font-weight: bold;
+	color: #802000;
+}
+.Alianor {
+	/* The 1st First Protector of the Suel */
+	font-style: italic;
+	font-weight: bold;
+	color: #ff6666;
+}
+.Anainyer {
+	/* The last First Protector of the Suel */
+	font-style: italic;
+	font-weight: bold;
+	color: #660000;
+}
+.Arinanin {
+	/* xxx */
+	font-style: italic;
+	font-weight: bold;
+	color: #660000;
+}
+.Elonzir_b_nar {
+	/* Prince of the House of Rhola */
+	font-style: italic;
+	font-weight: bold;
+	color: #666699;
+}
+.Eomund {
+	/* Young Sulois mage */
+	font-style: italic;
+	font-weight: bold;
+	color: #006666;
+}
+.Kel_ak_Kord {
+	/* Suel Schnai Tribal Chief */
+	font-style: italic;
+	font-weight: bold;
+	color: #3366cc;
+}
+.Kestar {
+	/* Body guard of Teriman, son of Suel Schnai Tribal Chief Kel-ak-Kord */
+	font-style: italic;
+	font-weight: bold;
+	color: #1f3d7a;
+}
+.Obendar {
+	/* Sulois male arch mage */
+	font-style: italic;
+	font-weight: bold;
+	color: #b366ff;
+}
+.Orvung {
+	/* Sulois ruler */
+	font-style: italic;
+	font-weight: bold;
+	color: #9933ff;
+}
+.Schnai {
+	/* Family house */
+	font-style: italic;
+	font-weight: bold;
+	color: #4d94ff;
+}
+.Slerotin {
+	/* Family house */
+	font-style: italic;
+	font-weight: bold;
+	color: #4d0000;
+}
+.Teriman {
+	/* Son of Suel Schnai Tribal Chief Kel-ak-Kord */
+	font-style: italic;
+	font-weight: bold;
+	color: #3366cc;
+}
+.Tilorop_b_Nan {
+	/* xx */
+	font-style: italic;
+	font-weight: bold;
+	color: #cc3300;
+}
+.Zeeckar {
+	/* Emperor */
+	font-style: italic;
+	font-weight: bold;
+	color: #cc9900;
+}
+.Zelfed_ad_Zol {
+	/* Zelfed ad-Zol, son of Zolfar */
+	font-style: italic;
+	font-weight: bold;
+	color: #e6b800;
+}
+.Zinkman {
+	/* Emperor */
+	font-style: italic;
+	font-weight: bold;
+	color: #cc8800;
+}
+.Zofar {
+	/* xx */
+	font-style: italic;
+	font-weight: bold;
+	color: #cc2200;
+}
+.Zolax {
+	/* Royal family */
+	font-style: italic;
+	font-weight: bold;
+	color: #0033cc;
+}
+.Zolexor_ad_Zol {
+	/* xx */
+	font-style: italic;
+	font-weight: bold;
+	color: #cc3300;
+}
+.Zolites {
+	/* People who fled to the Flanese */
+	font-style: italic;
+	font-weight: bold;
+	color: #004de6;
+}
+.Zunid {
+	/* Prince of House Zolax */
+	font-style: italic;
+	font-weight: bold;
+	color: #cc3300;
+}
+
+
+
+
+
+/* Clases for Dwarves & Gnomes */
+.Dwarves {
+	font-style: italic;
+	font-weight: bold;
+	color: #732626;
+}
+.Gnomes {
+	font-style: italic;
+	font-weight: bold;
+	color: #732626;
+}
+
+
+
+
+/* Clases for Elves */
+.Drow {
+	font-style: italic;
+	font-weight: bold;
+	color: #009900;
+}
+.Elagoris {
+	/* Elven mage */
+	font-style: italic;
+	font-weight: bold;
+	color: #40bf40;
+}
+.ElfGroup {
+	/* Elven groups */
+	font-style: italic;
+	font-weight: bold;
+	color: #008000;
+}
+.Imaravelle {
+	/* Young elven daughter of ambassidor */
+	font-style: italic;
+	font-weight: bold;
+	color: #77773c;
+}
+.Imarollon {
+	/* Elven ambassidor */
+	font-style: italic;
+	font-weight: bold;
+	color: #669900;
+}
+.Zendaris {
+	/* Young elven mage */
+	font-style: italic;
+	font-weight: bold;
+	color: #336600;
+}
+
+
+
+/* Classes for specific race of people */
+.Aerdy {
+	font-style: italic;
+	font-weight: bold;
+	color: #206040;
+}
+.baklun {
+	font-style: italic;
+	font-weight: bold;
+	color: brown;
+}
+.Flannae {
+	/* xxx */
+	font-style: italic;
+	font-weight: bold;
+	color: #33cc33;
+}
+.kersi {
+	/* xxx */
+	font-style: italic;
+	font-weight: bold;
+	color: #99004d;
+}
+.Oeridian {
+	/* xxx */
+	font-style: italic;
+	font-weight: bold;
+	color: #339966;
+}
+
+
+/* Classes for unique places */
+.AnaKeri {
+	/* Land to the south over the seas */
+	font-style: italic;
+	font-weight: bold;
+	color: #cc00cc;
+}
